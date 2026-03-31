@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liminal — Know Every Server. Patch Every Vulnerability.</title>
+  <meta name="description" content="Liminal replaces your entire infrastructure toolkit with one self-hosted platform. Inventory your fleet, track vulnerabilities in real time, and push software updates — all from one dashboard.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="#" class="nav-brand">
+        <img src="logo.svg" alt="Liminal" class="brand-logo">
+        <span class="brand-text">Liminal</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#product">Product</a>
+        <a href="#architecture">How It Works</a>
+        <a href="#security">Security</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="nav-actions">
+        <a href="https://github.com/lundstream/Liminal" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://discord.gg/NpwsJqhfxF" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.947 2.418-2.157 2.418z"/></svg>
+          Discord
+        </a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-glow"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">Open Source &middot; Self-Hosted &middot; MIT License</div>
+      <h1>Know every server.<br>Patch every vulnerability.<br><span class="text-accent">Control every deployment.</span></h1>
+      <p class="hero-sub">Your entire infrastructure — Windows and Linux — in a single, beautiful dashboard. Replace five different tools with one platform your team will actually enjoy using.</p>
+      <div class="hero-actions">
+        <a href="https://github.com/lundstream/Liminal/releases" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+          Download Liminal
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://github.com/lundstream/Liminal" target="_blank" rel="noopener" class="btn btn-outline btn-lg">View on GitHub</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-value">60s</span>
+          <span class="hero-stat-label">Deploy time</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">0</span>
+          <span class="hero-stat-label">External dependencies</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">$0</span>
+          <span class="hero-stat-label">License cost</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social proof strip -->
+  <section class="proof-strip">
+    <div class="container">
+      <div class="proof-items">
+        <div class="proof-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>SQLite — zero config database</span>
+        </div>
+        <div class="proof-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>No cloud services required</span>
+        </div>
+        <div class="proof-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>No subscription fees</span>
+        </div>
+        <div class="proof-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>Docker or Windows installer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product screenshot -->
+  <section class="product-showcase" id="product">
+    <div class="container">
+      <div class="screenshot-frame">
+        <div class="screenshot-bar">
+          <div class="screenshot-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="screenshot-url">liminal.yourcompany.com</span>
+        </div>
+        <img src="images/dashboard.png" alt="Liminal Dashboard — Fleet overview with real-time server status, availability, OS distribution, and activity trends" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Capabilities</div>
+        <h2>Everything you need to manage<br>your infrastructure</h2>
+        <p class="section-sub">Most teams juggle five different tools to answer simple questions. Liminal replaces that entire stack.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card feature-card-large">
+          <div class="feature-icon" style="--icon-color: var(--accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Real-Time Fleet Visibility</h3>
+          <p>Live cards for fleet size, availability, OS distribution, domain users, disk health, and activity trends. Filter by domain when you manage more than one environment.</p>
+          <div class="feature-tags">
+            <span class="tag">CPU &amp; RAM</span>
+            <span class="tag">Disk Health</span>
+            <span class="tag">Uptime</span>
+            <span class="tag">30+ Data Points</span>
+          </div>
+        </div>
+
+        <div class="feature-card feature-card-large">
+          <div class="feature-icon" style="--icon-color: var(--danger);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Vulnerability Intelligence</h3>
+          <p>Continuously ingests CVEs from NVD and CIRCL feeds, matches them against installed software on your servers, and surfaces results ranked by CVSS severity.</p>
+          <div class="feature-tags">
+            <span class="tag tag-danger">CVE Matching</span>
+            <span class="tag tag-danger">CVSS Scoring</span>
+            <span class="tag tag-danger">NVD + CIRCL</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="--icon-color: var(--success);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <h3>Software Deployments</h3>
+          <p>Push MSI, EXE, Winget, or ZIP packages to individual servers or broadcast fleet-wide. SHA256 verification on every download.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="--icon-color: var(--warning);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </div>
+          <h3>Alarms &amp; Notifications</h3>
+          <p>Server offline, disk critical, service crashed — get instant alerts on Discord, Teams, Slack, or email. Per-server maintenance windows.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="--icon-color: var(--info);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+          </div>
+          <h3>Windows Update Management</h3>
+          <p>See missing updates across your fleet, deploy them on your schedule, and track reboot status. No WSUS required.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="--icon-color: var(--accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Domain Intelligence</h3>
+          <p>GPO trees with links, settings, and WMI filters. DNS zones with full record detail. AD user lists. All collected automatically.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="--icon-color: var(--text2);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Complete Audit Trail</h3>
+          <p>Every action — deployments, logins, configuration changes, agent events — logged in a searchable Logbook with per-server drill-down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security screenshot -->
+  <section class="product-showcase dark-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge section-badge-danger">Security</div>
+        <h2>See every vulnerability<br>before your next audit</h2>
+        <p class="section-sub">Automatically match CVEs from the National Vulnerability Database against the software actually installed on your servers.</p>
+      </div>
+      <div class="screenshot-frame">
+        <div class="screenshot-bar">
+          <div class="screenshot-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="screenshot-url">liminal.yourcompany.com/security</span>
+        </div>
+        <img src="images/security.png" alt="Liminal Security — CVE vulnerability tracking with CVSS severity scoring and affected server mapping" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works / Architecture -->
+  <section class="architecture" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Architecture</div>
+        <h2>Simple by design.<br>Powerful by default.</h2>
+        <p class="section-sub">One server, lightweight agents, zero external dependencies. Deploy in 60 seconds.</p>
+      </div>
+
+      <div class="arch-diagram">
+        <div class="arch-node arch-server">
+          <div class="arch-node-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <h4>Liminal Server</h4>
+          <p>Express 5 + SQLite</p>
+          <div class="arch-tech-tags">
+            <span>Node.js</span>
+            <span>WAL Mode</span>
+            <span>REST API</span>
+          </div>
+        </div>
+
+        <div class="arch-connections">
+          <div class="arch-line"></div>
+          <div class="arch-line"></div>
+          <div class="arch-line"></div>
+        </div>
+
+        <div class="arch-agents">
+          <div class="arch-node arch-agent">
+            <div class="arch-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--info)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h4>Windows Agent</h4>
+            <p>C# .NET 9 service + tray app</p>
+          </div>
+          <div class="arch-node arch-agent">
+            <div class="arch-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            </div>
+            <h4>Linux Agent</h4>
+            <p>Python 3 systemd service</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deploy options -->
+      <div class="deploy-options">
+        <div class="deploy-card">
+          <div class="deploy-icon">🐳</div>
+          <h4>Docker</h4>
+          <code class="deploy-code">docker compose up -d</code>
+          <p>One command. Production ready.</p>
+        </div>
+        <div class="deploy-card">
+          <div class="deploy-icon">⚡</div>
+          <h4>Node.js</h4>
+          <code class="deploy-code">npm install &amp;&amp; node server.js</code>
+          <p>Run anywhere Node runs.</p>
+        </div>
+        <div class="deploy-card">
+          <div class="deploy-icon">🪟</div>
+          <h4>Windows Installer</h4>
+          <code class="deploy-code">LiminalServerSetup.exe</code>
+          <p>No command line required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data collection -->
+  <section class="data-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Inventory</div>
+        <h2>30+ data points per server,<br>collected automatically</h2>
+      </div>
+
+      <div class="data-grid">
+        <div class="data-category">
+          <h4>Hardware</h4>
+          <ul>
+            <li>CPU &amp; RAM</li>
+            <li>Physical / Virtual</li>
+            <li>Manufacturer &amp; Model</li>
+            <li>Serial Number</li>
+          </ul>
+        </div>
+        <div class="data-category">
+          <h4>Operating System</h4>
+          <ul>
+            <li>Name &amp; Version</li>
+            <li>Build &amp; Install Date</li>
+            <li>Last Boot &amp; Uptime</li>
+            <li>Missing Windows Updates</li>
+          </ul>
+        </div>
+        <div class="data-category">
+          <h4>Network</h4>
+          <ul>
+            <li>Adapters &amp; IPs</li>
+            <li>MAC Addresses</li>
+            <li>DNS Servers</li>
+          </ul>
+        </div>
+        <div class="data-category">
+          <h4>Storage</h4>
+          <ul>
+            <li>Disks &amp; Capacity</li>
+            <li>Free Space</li>
+            <li>Health Status</li>
+            <li>30-Day Trend Charts</li>
+          </ul>
+        </div>
+        <div class="data-category">
+          <h4>Software</h4>
+          <ul>
+            <li>Installed Programs</li>
+            <li>Winget Packages</li>
+            <li>Custom Packages</li>
+            <li>Custom Scripts</li>
+          </ul>
+        </div>
+        <div class="data-category">
+          <h4>Security</h4>
+          <ul>
+            <li>Firewall Rules</li>
+            <li>Local Administrators</li>
+            <li>Local Policies</li>
+            <li>Event Errors</li>
+          </ul>
+        </div>
+        <div class="data-category">
+          <h4>Services</h4>
+          <ul>
+            <li>Running Services</li>
+            <li>State-Change Alerts</li>
+          </ul>
+        </div>
+        <div class="data-category">
+          <h4>Domain (DC only)</h4>
+          <ul>
+            <li>GPOs &amp; DNS Zones</li>
+            <li>AD Users</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security -->
+  <section class="security-section" id="security">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge section-badge-success">Built Secure</div>
+        <h2>Security is not an afterthought</h2>
+        <p class="section-sub">Liminal is built with security as a first-class concern from day one.</p>
+      </div>
+
+      <div class="security-grid">
+        <div class="security-item">
+          <div class="security-check">✓</div>
+          <div>
+            <h4>bcrypt Password Hashing</h4>
+            <p>12 rounds — never stored in plain text</p>
+          </div>
+        </div>
+        <div class="security-item">
+          <div class="security-check">✓</div>
+          <div>
+            <h4>Secure Sessions</h4>
+            <p>httpOnly, sameSite=lax, 8-hour expiry</p>
+          </div>
+        </div>
+        <div class="security-item">
+          <div class="security-check">✓</div>
+          <div>
+            <h4>Login Throttling</h4>
+            <p>fail2ban-style lockout after 5 failed attempts</p>
+          </div>
+        </div>
+        <div class="security-item">
+          <div class="security-check">✓</div>
+          <div>
+            <h4>Security Headers</h4>
+            <p>CSP, X-Frame-Options DENY, nosniff, strict referrer</p>
+          </div>
+        </div>
+        <div class="security-item">
+          <div class="security-check">✓</div>
+          <div>
+            <h4>Role-Based Access</h4>
+            <p>Admin and read-only roles with domain-scoped permissions</p>
+          </div>
+        </div>
+        <div class="security-item">
+          <div class="security-check">✓</div>
+          <div>
+            <h4>SHA256 File Verification</h4>
+            <p>Every upload verified with type restrictions and size limits</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Pricing</div>
+        <h2>Free. Forever. No catch.</h2>
+        <p class="section-sub">Liminal is open source under the MIT license. No feature gates, no time limits, no "contact sales" buttons.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-tier">Community</div>
+          <div class="pricing-price">
+            <span class="price-amount">$0</span>
+            <span class="price-period">forever</span>
+          </div>
+          <ul class="pricing-features">
+            <li>Unlimited servers</li>
+            <li>All features included</li>
+            <li>Windows &amp; Linux agents</li>
+            <li>CVE vulnerability tracking</li>
+            <li>Software deployments</li>
+            <li>Alarms &amp; notifications</li>
+            <li>Full audit trail</li>
+            <li>Community support via GitHub</li>
+          </ul>
+          <a href="https://github.com/lundstream/Liminal/releases" target="_blank" rel="noopener" class="btn btn-primary btn-block">Download Now</a>
+        </div>
+
+        <div class="pricing-card pricing-card-highlight">
+          <div class="pricing-popular">Most Popular</div>
+          <div class="pricing-tier">Professional Support</div>
+          <div class="pricing-price">
+            <span class="price-amount">Custom</span>
+          </div>
+          <ul class="pricing-features">
+            <li>Everything in Community</li>
+            <li>Priority email support</li>
+            <li>Implementation assistance</li>
+            <li>Custom agent development</li>
+            <li>Training sessions</li>
+            <li>SLA-backed response times</li>
+          </ul>
+          <a href="mailto:info@lundstream.net" class="btn btn-outline btn-block">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-glow"></div>
+        <h2>Ready to see your entire infrastructure<br>in one place?</h2>
+        <p>Deploy Liminal in 60 seconds. No credit card. No vendor lock-in. Just clarity.</p>
+        <div class="hero-actions">
+          <a href="https://github.com/lundstream/Liminal/releases" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Get Started Free
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://github.com/lundstream/Liminal" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Star on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="Liminal" class="brand-logo">
+        <span class="brand-text">Liminal</span>
+        <span class="footer-by">by PostLiminal Systems</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/lundstream/Liminal" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://discord.gg/NpwsJqhfxF" target="_blank" rel="noopener">Discord</a>
+        <a href="https://github.com/lundstream/Liminal/releases" target="_blank" rel="noopener">Releases</a>
+        <a href="https://github.com/lundstream/Liminal/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+        <a href="mailto:info@lundstream.net">Contact</a>
+      </div>
+      <div class="footer-copy">&copy; 2025 PostLiminal Systems. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
