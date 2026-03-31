@@ -3,5 +3,5 @@ services:
     build: .
     container_name: postliminal-web
     ports:
-      - "8080:80"
+      - "6443:80"
     restart: unless-stopped
